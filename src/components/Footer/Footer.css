@@ -1,0 +1,12 @@
+footer {
+	font-size: var(--extra-small-font-size);
+	line-height: 0;
+	border-top: 1px solid var(--light-color);
+	padding: 8px;
+	text-align: center;
+	margin-top: auto;
+}
+
+footer p span {
+	font-weight: var(--extra-bold-font-weight);
+}

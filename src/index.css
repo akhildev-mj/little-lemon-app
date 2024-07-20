@@ -1,13 +1,58 @@
-body {
+:root {
+	/* Colors */
+	--primary-color-1: #495e57;
+	--primary-color-2: #f4ce14;
+	--secondary-color-1: #ee9972;
+	--secondary-color-2: #fbdabb;
+
+	--extra-light-color: #f1f1f1;
+	--light-color: #edefee;
+	--dark-color: #333333;
+
+	--active-color: #0088ef;
+	--transparent-color: #00000000;
+
+	--light-grey-color: #d8d8d8;
+	--grey-color: #a2a2a2;
+	--dark-grey-color: #3a3a3a;
+
+	/* Font sizes */
+	--extra-small-font-size: 12px;
+	--small-font-size: 14px;
+	--medium-font-size: 16px;
+	--large-font-size: 18px;
+	--extra-large-font-size: 20px;
+
+	/* Font Weights */
+	--light--font-weight: 200;
+	--normal-font-weight: 400;
+	--bold-font-weight: 600;
+	--extra-bold-font-weight: 800;
+	--black-font-weight: 800;
+}
+
+body,
+input,
+select,
+button {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-size: var(--medium-font-size);
+	font-weight: var(--normal-font-weight);
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+#root {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }

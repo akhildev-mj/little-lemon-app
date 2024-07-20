@@ -1,0 +1,33 @@
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+li {
+	margin: 0 15px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--dark-color);
+	font-size: var(--font-size);
+	font-weight: var(--bold-font-weight);
+	border-bottom: solid 1px var(--transparent-color);
+	transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+	color: var(--active-color);
+	border-bottom: solid 1px var(--active-color);
+}
+
+a.active {
+	color: var(--active-color);
+}
