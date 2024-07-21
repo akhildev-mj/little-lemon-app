@@ -1,0 +1,39 @@
+.about-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.about-text {
+	flex: 1;
+	padding: 20px;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.about-text h2 {
+	color: var(--dark-color);
+	margin: 0;
+}
+
+.about-text h3 {
+	color: var(--dark-grey-color);
+	margin: 0;
+}
+
+.about-text p {
+	color: var(--dark-grey-color);
+	margin: 0;
+}
+
+.about-image-container {
+	padding: 20px;
+}
+
+.about-image {
+	height: 300px;
+	border-radius: 8px;
+}

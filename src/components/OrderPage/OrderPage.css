@@ -1,0 +1,10 @@
+.order-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.order-page h1 {
+	margin: 40px 0;
+}
