@@ -43,38 +43,51 @@ function Footer() {
 				</p>
 			</div>
 			<div className='footer-column nav-column'>
-				<h3>Navigation</h3>
-				<ul>
-					<li>
-						<NavLink to='/'>Home</NavLink>
-					</li>
-					<li>
-						<a href='/#menu' onClick={e => handleScrollToSection(e, 'menu')}>
-							Menu
-						</a>
-					</li>
-					<li>
-						<a href='/#about' onClick={e => handleScrollToSection(e, 'about')}>
-							About
-						</a>
-					</li>
-					<li>
-						<NavLink to='/booking'>Book Table</NavLink>
-					</li>
-					<li>
-						<NavLink to='/order'>Order</NavLink>
-					</li>
-				</ul>
+				<div className='nav-column-wrapper'>
+					<h3>Navigation</h3>
+					<ul>
+						<li>
+							<NavLink to='/'>Home</NavLink>
+						</li>
+
+						<li>
+							<a
+								href='/#about'
+								onClick={e => handleScrollToSection(e, 'about')}
+							>
+								About
+							</a>
+						</li>
+
+						<li>
+							<a href='/#menu' onClick={e => handleScrollToSection(e, 'menu')}>
+								Menu
+							</a>
+						</li>
+
+						<li>
+							<NavLink to='/booking'>Reservations</NavLink>
+						</li>
+
+						<li>
+							<NavLink to='/order'>Order Online</NavLink>
+						</li>
+
+						<li>
+							<NavLink to='/login'>Login</NavLink>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div className='footer-column contact-column'>
 				<h3>Contact</h3>
 				<p>2548 Matthews Street, Chicago, Illinois - 60631</p>
 				<p>815-582-5830</p>
-				<p>815-582-5880</p>
-				<p>contact@littlelemon.com</p>
+				<p>contact1@littlelemon.com</p>
+				<p>contact2@littlelemon.com</p>
 			</div>
 			<div className='footer-column social-media-column'>
-				<h3>Socail Media</h3>
+				<h3>Social Media</h3>
 				<div className='social-media-icons'>
 					<a
 						href='https://www.facebook.com'

@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdDeliveryDining } from 'react-icons/md';
 import './MenuItem.css';
 
 const MenuItem = ({ item, className }) => {
@@ -7,14 +8,19 @@ const MenuItem = ({ item, className }) => {
 			<div className='card-image'>
 				<img src={item.image} alt={item.name} />
 			</div>
-			<h3>{item.name}</h3>
-			<p>{item.description}</p>
-			<p className='price'>
-				{item.price}
+			<div className='card-header'>
+				<h3>{item.name}</h3>
+				<p className='price'>{item.price}</p>
+			</div>
+			<p className='card-description'>{item.description}</p>
+			<div className='card-button'>
 				<button className='order-now-button'>
-					Order Now <span className='order-icon'>🛒</span>
+					Order a delivery{' '}
+					<span className='order-icon'>
+						<MdDeliveryDining />
+					</span>
 				</button>
-			</p>
+			</div>
 		</div>
 	);
 };

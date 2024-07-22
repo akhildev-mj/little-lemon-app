@@ -1,4 +1,4 @@
-import MenuGrid from '../MenuGrid/MenuGrid';
+import MenuGrid from '../../MenuGrid/MenuGrid';
 import './OrderPage.css';
 
 function OrderPage() {

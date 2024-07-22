@@ -1,0 +1,18 @@
+#menu .section-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 980px;
+	width: 100%;
+	padding: 40px;
+}
+
+#menu .section-title h1,
+#menu .section-title button {
+	margin: 0;
+	padding: 0;
+}
+
+#menu .section-title button {
+	padding: 10px 20px;
+}

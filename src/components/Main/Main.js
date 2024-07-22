@@ -1,5 +1,6 @@
-import About from '../AboutPage/About';
+import About from '../About/About';
 import Menu from '../Menu/Menu';
+import Testimonials from '../Testimonials/Testimonials';
 import './Main.css';
 
 function Main() {
@@ -15,12 +16,13 @@ function Main() {
 					<button className='reserve-button'>Reserve a Table</button>
 				</div>
 				<div className='hero-image-container'>
-					<img src='assets/images/about.jpg' alt='Restaurant' />
+					<img src='assets/images/hero.jpg' alt='Restaurant' />
 				</div>
 			</div>
 			<div className='hero-space'></div>
 			<Menu />
 			<About />
+			<Testimonials />
 		</main>
 	);
 }

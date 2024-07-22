@@ -37,10 +37,15 @@ footer {
 .nav-column {
 	display: flex;
 	flex-direction: column;
+}
+
+.nav-column-wrapper {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 	align-self: flex-start;
-	margin-left: 10px;
+	align-self: center;
 }
 
 .nav-column h3 {
@@ -56,7 +61,7 @@ footer {
 }
 
 .nav-column ul li {
-	margin: 2px 0;
+	margin: 1px 0;
 }
 
 .nav-column ul li a {

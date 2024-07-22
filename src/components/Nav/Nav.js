@@ -35,21 +35,27 @@ function Nav() {
 				</li>
 
 				<li>
-					<a href='/#menu' onClick={e => handleScrollToSection(e, 'menu')}>
-						Menu
-					</a>
-				</li>
-				<li>
 					<a href='/#about' onClick={e => handleScrollToSection(e, 'about')}>
 						About
 					</a>
 				</li>
 
 				<li>
-					<NavLink to='/booking'>Book Table</NavLink>
+					<a href='/#menu' onClick={e => handleScrollToSection(e, 'menu')}>
+						Menu
+					</a>
 				</li>
+
 				<li>
-					<NavLink to='/order'>Order</NavLink>
+					<NavLink to='/booking'>Reservations</NavLink>
+				</li>
+
+				<li>
+					<NavLink to='/order'>Order Online</NavLink>
+				</li>
+
+				<li>
+					<NavLink to='/login'>Login</NavLink>
 				</li>
 			</ul>
 		</nav>
