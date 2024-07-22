@@ -44,3 +44,21 @@
 .reserve-button:hover {
 	background-color: var(--secondary-color-1);
 }
+
+@media (max-width: 800px) {
+	.hero-div {
+		flex-direction: column;
+		padding: 10px 20px;
+	}
+
+	.hero-div div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.reserve-button {
+		margin-bottom: 20px;
+	}
+}

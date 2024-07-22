@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Importing hamburger and close icons
 import { NavLink, useNavigate } from 'react-router-dom';
 import './Nav.css';
 
 function Nav() {
 	const navigate = useNavigate();
 	const [targetHash, setTargetHash] = useState(null);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const handleScrollToSection = (e, sectionId) => {
 		e.preventDefault();
 		setTargetHash(sectionId);
 		navigate('/');
+		setIsMenuOpen(false);
 	};
 
 	useEffect(() => {
@@ -27,37 +30,50 @@ function Nav() {
 		}
 	}, [targetHash, navigate]);
 
+	const toggleMenu = () => setIsMenuOpen(prevState => !prevState);
+
 	return (
 		<nav>
-			<ul>
-				<li>
-					<NavLink to='/'>Home</NavLink>
-				</li>
+			{/* Hamburger Icon */}
+			<div className='hamburger-icon' onClick={toggleMenu}>
+				{isMenuOpen ? <FaTimes /> : <FaBars />}
+			</div>
 
-				<li>
-					<a href='/#about' onClick={e => handleScrollToSection(e, 'about')}>
-						About
-					</a>
-				</li>
-
-				<li>
-					<a href='/#menu' onClick={e => handleScrollToSection(e, 'menu')}>
-						Menu
-					</a>
-				</li>
-
-				<li>
-					<NavLink to='/booking'>Reservations</NavLink>
-				</li>
-
-				<li>
-					<NavLink to='/order'>Order Online</NavLink>
-				</li>
-
-				<li>
-					<NavLink to='/login'>Login</NavLink>
-				</li>
-			</ul>
+			{/* Nav Items */}
+			<div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+				<ul>
+					<li>
+						<NavLink to='/' onClick={() => setIsMenuOpen(false)}>
+							Home
+						</NavLink>
+					</li>
+					<li>
+						<a href='/#about' onClick={e => handleScrollToSection(e, 'about')}>
+							About
+						</a>
+					</li>
+					<li>
+						<a href='/#menu' onClick={e => handleScrollToSection(e, 'menu')}>
+							Menu
+						</a>
+					</li>
+					<li>
+						<NavLink to='/booking' onClick={() => setIsMenuOpen(false)}>
+							Reservations
+						</NavLink>
+					</li>
+					<li>
+						<NavLink to='/order' onClick={() => setIsMenuOpen(false)}>
+							Order Online
+						</NavLink>
+					</li>
+					<li>
+						<NavLink to='/login' onClick={() => setIsMenuOpen(false)}>
+							Login
+						</NavLink>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	);
 }

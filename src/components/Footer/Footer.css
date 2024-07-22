@@ -120,3 +120,20 @@ footer {
 	transform: scale(1.2);
 	border-bottom: solid 1px var(--transparent-color);
 }
+
+@media (max-width: 800px) {
+	footer {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		align-self: center;
+	}
+
+	.footer-column {
+		padding: 15px 0;
+	}
+
+	.nav-column ul {
+		align-items: center;
+	}
+}

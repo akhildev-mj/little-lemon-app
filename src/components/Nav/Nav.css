@@ -1,6 +1,7 @@
 nav {
 	display: flex;
 	justify-content: center;
+	position: relative;
 }
 
 ul {
@@ -30,4 +31,64 @@ a:hover {
 
 a.active {
 	color: var(--active-color);
+}
+
+.hamburger-icon {
+	display: none;
+	cursor: pointer;
+	font-size: 24px;
+	position: absolute;
+	right: 20px;
+	top: -10px;
+}
+
+.nav-menu {
+	display: flex;
+}
+
+.nav-menu ul {
+	display: flex;
+}
+
+.nav-menu li {
+	margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+	.hamburger-icon {
+		display: block;
+	}
+
+	.nav-menu {
+		display: none;
+		position: fixed;
+		top: 60px;
+		right: 50px;
+		background-color: white;
+		z-index: 1000;
+		overflow-y: auto;
+	}
+
+	.nav-menu.open {
+		display: block;
+	}
+
+	.nav-menu ul {
+		flex-direction: column;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.nav-menu li {
+		margin: 0;
+	}
+
+	.nav-menu a {
+		display: block;
+		padding: 15px;
+		color: var(--dark-color);
+		text-align: center;
+		border-bottom: 1px solid var(--light-gray);
+	}
 }
